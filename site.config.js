@@ -26,8 +26,8 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "Walk With Me",
-    description: "Bienvenue sur le blog – walk with me!",
+    title: "Blog Shidoverse",
+    description: "Bienvenue sur mon blog – @shidoverse",
   },
 
   // CONFIG configration (required)
