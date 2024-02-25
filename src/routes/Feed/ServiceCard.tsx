@@ -1,6 +1,6 @@
 import { CONFIG } from "site.config"
 import React from "react"
-import { AiFillCodeSandboxCircle } from "react-icons/ai"
+import { FiBox } from "react-icons/fi";
 import styled from "@emotion/styled"
 import { Emoji } from "src/components/Emoji"
 
@@ -19,8 +19,8 @@ const ServiceCard: React.FC = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <AiFillCodeSandboxCircle className="icon" />
-            <div className="name">{CONFIG.projects[0].name}</div>
+            <FiBox className="icon" />
+            <div className="name">{project.name}</div>
           </a>
         ))}
       </StyledWrapper>

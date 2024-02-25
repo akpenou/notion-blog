@@ -11,6 +11,9 @@ export type MetaConfigProps = {
 }
 
 const MetaConfig: React.FC<MetaConfigProps> = (props) => {
+  if (props.image) {
+    props.image = `/shidoverse blog thumbnail.png`
+  }
   return (
     <Head>
       <title>{props.title}</title>
