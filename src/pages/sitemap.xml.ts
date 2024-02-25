@@ -27,7 +27,7 @@ function generateSiteMap(posts: TPost[]) {
          return `
        <url>
             <loc>${`${CONFIG.link}/${slug}`}</loc>
-            <lastchange>${lastUpdateTime}</lastchange>
+            <lastchange>${new Date(lastUpdateTime).toISOString()}</lastchange>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
        </url>
@@ -52,7 +52,7 @@ export async function getServerSideProps(ctx: any) {
   ctx.res.write(sitemap)
   ctx.res.end()
 
-  return null
+  return { status: "ok!" }
 }
 
 export default SiteMap
