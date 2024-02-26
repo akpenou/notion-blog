@@ -10,26 +10,26 @@ function generateSiteMap(posts: TPost[]) {
         <loc>${CONFIG.link}</loc>
         <lastchange>${new Date().toISOString()}</lastchange>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>${CONFIG.link}/resume</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>${CONFIG.link}/about</loc>
         <changefreq>daily</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
      ${posts
        .map(({ slug, lastUpdateTime }) => {
          return `
        <url>
             <loc>${`${CONFIG.link}/${slug}`}</loc>
-            <lastchange>${new Date(lastUpdateTime).toISOString()}</lastchange>
+            <lastmod>${new Date(lastUpdateTime).toISOString()}</lastmod>
             <changefreq>weekly</changefreq>
-            <priority>0.8</priority>
+            <priority>0.7</priority>
        </url>
      `
        })
