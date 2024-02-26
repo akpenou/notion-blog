@@ -8,7 +8,6 @@ function generateSiteMap(posts: TPost[]) {
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>${CONFIG.link}</loc>
-        <lastchange>${new Date().toISOString()}</lastchange>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
