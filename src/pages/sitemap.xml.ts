@@ -52,7 +52,7 @@ export async function getServerSideProps(ctx: any) {
   ctx.res.write(sitemap)
   ctx.res.end()
 
-  return { status: "ok!" }
+  return { props: { status: "ok!" } }
 }
 
 export default SiteMap
